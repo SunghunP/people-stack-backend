@@ -17,7 +17,9 @@ const { default: mongoose } = require('mongoose');
 // --------------- //
 // Middleware
 // --------------- //
+app.use(cors()); // to prevent cors errors, open access to all origins
 app.use(morgan("dev")); // log every HTTP request
+app.use(express.json()); // parse json bodies
 
 // --------------- //
 // Database Connection 
