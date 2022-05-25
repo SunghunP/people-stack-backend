@@ -1,4 +1,4 @@
-import People from "../models/people.js";
+const People = require("../models/people.js");
 
 module.exports = {
   index,
