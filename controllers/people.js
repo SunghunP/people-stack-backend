@@ -2,10 +2,13 @@ const People = require("../models/people");
 
 module.exports = {
   index,
-  create,
+  // delete,
   update,
+  create,
+  show,
 }
 
+// INDUCES - index delete update create extension show
 // People Index Route
 async function index(req, res) {
   try {
@@ -16,6 +19,9 @@ async function index(req, res) {
     res.status(400).json(err);
   }
 }
+
+// People Delete Route
+
 
 // People Update Route
 async function update(req, res) {
@@ -37,6 +43,16 @@ async function create(req, res) {
     res.json(await People.create(req.body));
   } catch (err) {
     // send the error 
+    res.status(400).json(err);
+  }
+}
+
+// People Show Route
+async function show(req, res) {
+  try {
+    // send all people
+    res.json(await People.findById(req.params.id));
+  } catch(err) {
     res.status(400).json(err);
   }
 }
