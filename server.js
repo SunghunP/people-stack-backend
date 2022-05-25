@@ -11,14 +11,14 @@ const express = require('express');
 const app = express();
 
 const cors = require('cors');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const { default: mongoose } = require('mongoose');
 
 // --------------- //
 // Middleware
 // --------------- //
 app.use(cors()); // to prevent cors errors, open access to all origins
-app.use(morgan("dev")); // log every HTTP request
+// app.use(morgan("dev")); // log every HTTP request
 app.use(express.json()); // parse json bodies
 
 // --------------- //
