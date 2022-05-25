@@ -1,4 +1,4 @@
-const People = require("../temp/people");
+const People = require("../models/temp");
 
 module.exports = {
   index,
