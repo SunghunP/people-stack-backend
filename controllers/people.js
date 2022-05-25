@@ -2,7 +2,7 @@ const People = require("../models/people");
 
 module.exports = {
   index,
-  // delete,
+  deletePerson,
   update,
   create,
   show,
@@ -14,14 +14,22 @@ async function index(req, res) {
   try {
     // fetch all people from our DB
     res.json(await People.find({}));
-  } catch(err) {
+  } catch (err) {
     // send the error
     res.status(400).json(err);
   }
 }
 
 // People Delete Route
-
+async function deletePerson(req, res) {
+  try {
+    // send all people
+    res.json(await People.findByIdAndDelete(req.params.id));
+  } catch (err) {
+    // send error
+    res.status(400).json(err);
+  }
+}
 
 // People Update Route
 async function update(req, res) {
@@ -52,7 +60,7 @@ async function show(req, res) {
   try {
     // send all people
     res.json(await People.findById(req.params.id));
-  } catch(err) {
+  } catch (err) {
     res.status(400).json(err);
   }
 }
