@@ -1,4 +1,4 @@
-const People = require("../models/people.js");
+const People = require("../models/people");
 
 module.exports = {
   index,
@@ -8,7 +8,7 @@ module.exports = {
   show,
 }
 
-// INDUCES - index delete update create extension show
+// INDUCES - index delete update create extension snakes
 // People Index Route
 async function index(req, res) {
   try {
