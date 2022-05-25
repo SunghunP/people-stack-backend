@@ -1,8 +1,8 @@
-const People = require("../models/people.js");
+import People from "../models/people.js";
 
 module.exports = {
   index,
-  deletePerson,
+  delete: deletePerson,
   update,
   create,
   show,

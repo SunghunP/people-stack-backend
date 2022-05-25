@@ -40,7 +40,7 @@ const peopleRouter = require('./routes/people'); // import people routes
 
 // let the app Use the routes
 app.use("/", indexRouter);
-app.use('/people', peopleRouter)
+app.use('/people', peopleRouter);
 
 // Listener
 app.listen(PORT, () => console.log(`Listening on Port: ${PORT}...`));
