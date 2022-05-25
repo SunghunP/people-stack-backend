@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 // destructure the Schema and model from mongoose
-const { Schema, model } = mongoose
+const { Schema, model } = mongoose;
 
 const PeopleSchema = new Schema({
   name: { type: String, required: true },
@@ -9,7 +9,7 @@ const PeopleSchema = new Schema({
 });
 
 // give the People model a schema
-const People = model("People", PeopleSchema)
+const People = model("People", PeopleSchema);
 
 // export the model
-module.exports = People
+module.exports = People;
